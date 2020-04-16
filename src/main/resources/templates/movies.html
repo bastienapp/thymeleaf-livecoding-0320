@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+</head>
+<body>
+<h1>My movie list</h1>
+<ul>
+    <li th:each="eachMovie : ${movies}">
+        <a th:href="@{/movie(idMovie=${eachMovie.id})}" th:text="${eachMovie.title}">Movie title 1</a>
+    </li>
+</ul>
+</body>
+</html>

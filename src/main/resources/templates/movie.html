@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie's details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 th:text="${movie.title}">Title</h1>
+<p th:text="${#dates.format(movie.release, 'dd/MM/yyyy')}">01/01/1970</p>
+<img th:src="${movie.picture}" alt="title"
+     th:alt="${movie.title}">
+<p th:text="${movie.rate}">3.5</p>
+</body>
+</html>
